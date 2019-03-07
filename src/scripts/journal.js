@@ -9,10 +9,13 @@ const makeJournalEntryComponent = (journalEntry) => {
     `
 }
 
-for(let i = 0; i < journal_entries.length; i++){
-    articleDOM.innerHTML += makeJournalEntryComponent(journal_entries[i])
-}
 
-// fetch("localhost:8088/entries.json"){
 
-// }
+fetch("http://localhost:3000/entries")
+.then(response => response.json())
+.then(parsedResponse => {
+    for(let element of parsedResponse){
+        articleDOM.innerHTML += makeJournalEntryComponent(element)
+    }
+    console.log(parsedResponse)
+})
