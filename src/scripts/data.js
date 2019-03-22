@@ -11,5 +11,6 @@ const API = {
             },
             body: JSON.stringify(entry)
         })
+        .then(r => console.log(r.json()))
     }
 }

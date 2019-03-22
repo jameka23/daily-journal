@@ -7,8 +7,8 @@ const saveButtonHandler = () => {
 
     const entry = newJournalEntry(userConcept, userEntry, userEntryDate, userMood);
 
-    API.postJournalEntries(entry).then(functionThatRendersData)
-}
-
-
-
+    API.postJournalEntries(entry)
+    
+}       
+// .then(clearElement(articleDOM))
+// .then(response => response.json())

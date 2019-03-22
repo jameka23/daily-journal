@@ -1,9 +1,10 @@
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
     return `
-        <h4>${journalEntry.concepts}</h4>
+        <h1>${journalEntry.concepts}</h1>
         <p>${journalEntry.entry}</p>
         <p>${journalEntry.entry_date}</p>
+        <p>${journalEntry.mood}</p>
     `
 }
 
@@ -14,5 +15,11 @@ const newJournalEntry = (journalConcepts, journalEntry, journalDate, journalMood
         "concepts": journalEntry,
         "entry": journalDate,
         "mood": journalMood
+    }
+}
+
+const clearElement = domElement => {
+    while(domElement.firstChild){
+        return domElement.removeChild(domElement.firstChild)
     }
 }
