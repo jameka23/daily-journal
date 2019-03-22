@@ -3,10 +3,13 @@ const API = {
         return fetch("http://localhost:8088/entries")
         .then(response => response.json())
     },
-    postJournalEntries () {
+    postJournalEntries (entry) {
         return fetch("http://localhost:8088/entries",{
             method: "POST",
-            body: ""
+            headers:{
+                "Content-Type": "application/json" 
+            },
+            body: JSON.stringify(entry)
         })
     }
 }

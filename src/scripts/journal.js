@@ -8,3 +8,6 @@
 // let apiEntries = API.getJournalEntries()
 // console.log(apiEntries)
 API.getJournalEntries().then(functionThatRendersData)
+
+const saveButton = document.querySelector("#save--button");
+saveButton.addEventListener("click", saveButtonHandler);

@@ -6,3 +6,13 @@ const makeJournalEntryComponent = (journalEntry) => {
         <p>${journalEntry.entry_date}</p>
     `
 }
+
+// Invoke the factory function, passing along the form field values
+const newJournalEntry = (journalConcepts, journalEntry, journalDate, journalMood) => {
+    return {
+        "entry_date": journalConcepts,
+        "concepts": journalEntry,
+        "entry": journalDate,
+        "mood": journalMood
+    }
+}
